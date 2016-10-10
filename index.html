@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BuyList</title>
+    <link rel="stylesheet" type="" href="./indexStyles.css">
+    <script type="text/javascript" src="./indexJs.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="productForm">
+            <form class="search" onsubmit="return false">
+                <input class="searchProduct" type="text" name="searchProduct" placeholder="Назва товару">
+                <button class="submit tooltip" data-tooltip ="tip - tip" type="submit"  onclick="addProduct();">Додати</button>
+            </form>
+            
+            <table class="productTable">
+                
+                <tr id ="template" class = "notDisplayed">
+                <td class="nameField">Nomen</td>
+                
+                <td class="center-align">
+                    <button class="remove tooltip disabled" data-tooltip="click here to remove" onclick="dec(this)">-</button>
+                    <button class="number tooltip" data-tooltip="current amount">1</button> 
+                    <button class="add tooltip" data-tooltip = "click to add"
+                            onclick = "inc(this)">+</button>
+                </td>
+                <td class="right-align">
+                    <button class="buy tooltip" data-tooltip = "tooltip" onclick ="setBought(this)">Куплено</button>
+                    <button class="buy tooltip notDisplayed" data-tooltip = "tooltip" onclick="setNotBought(this)">Не куплено</button>
+                    <button class="delete tooltip" data-tooltip="tooptippo" onclick = "remove(this)">x</button>
+                </td>
+                </tr>
+            
+            </table>
+        </div>
+        <div class="productInfo">
+             <div class="row"> 
+            <h3>Залишилося</h3>
+            </div>
+            <div class="row">
+                
+                <span class="notDisplayed" id ="infoTamplate">Nomen<span class="coin">1</span></span>
+            
+            </div>
+            <div class="row">
+            <h3>Куплено</h3>
+            </div>
+            <div class="row"></div>
+            
+        </div>
+    </section>
+    
+    <div class="label">
+        <p class="title"> Buy List</p>
+        <p>Created by: <BR> Vova Bezshtanko</p>
+    </div>
+</body>
+</html>

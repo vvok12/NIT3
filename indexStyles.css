@@ -1,0 +1,226 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background: lightGray;
+}
+
+
+
+section {
+    padding: 100px 30px;
+}
+
+form.search {
+    width: 100%;
+}
+
+.productForm {
+    vertical-align: top;
+    background: white;
+    width: 70%;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 30px; 
+    min-width: 385px;
+}
+
+form {
+    padding: 20px 10px;
+    float: left;
+}
+
+input.searchProduct {
+    width: 70%;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid lightGray;
+}
+button.submit {
+    padding: 11px 30px;
+    font-size: 15px;
+    margin-left: -10px;
+    background: blue;
+    color: white;
+    font-weight: 700;
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    max-width: 25%;
+}
+
+table.productTable {
+    width: 100%;
+}
+
+td {
+    padding: 10px 10px;
+    border-top: 1px solid lightgray;
+    list-style: none;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.right-align {
+    text-align: right;
+}
+
+button.add {
+    border-radius: 50%;
+    background: green;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+}
+
+button.remove {
+    border-radius: 50%;
+    background: pink;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    font-size: 22px;
+    position: relative;
+    top: 3px;
+}
+
+button.number {
+    width: 25px;
+    height: 25px;
+    background: rgb(225,225,225);
+    text-align: center;
+    border: 0px;
+    border-radius: 10%;
+    margin: 0 5px;
+    position: relative;
+}
+
+button.buy {
+    background: lightGray;
+    border: 1px solid gray;
+    border-radius: 5%;
+    text-align: center;
+    padding: 7px 14px;
+}
+
+button.delete {
+    background: red;
+    color: white;
+    border: 0px;
+    border-radius: 10%;
+    padding: 8px 12px;
+}
+
+.row {
+    border-bottom: 1px solid lightgray;
+    padding: 20px 10px;
+}
+
+.productInfo {
+    margin-left: 20px;
+    vertical-align: top;
+    background: white;
+    width: 25%;
+    min-height: 200px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.productInfo span {
+    background: lightgray;
+    border-radius: 5%;
+    font-size: 14px;
+    line-height: 28px;
+    display: inline-block;
+    margin: 3px;
+}
+
+.productInfo span.coin {
+    color: white;
+    background: orange;
+    padding: 1px 10px;
+    border-radius: 50%;
+}
+.productInfo h3 {
+    margin: 0;
+}
+.label{
+    background-color: blueviolet;
+    width: 150px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: fixed;
+    left: 20px;
+    bottom: -60px;
+    transition: 1s;
+    color: white;
+}
+.label .title{
+    font-size: 20px;
+}
+.label:hover{
+    bottom: 0;
+    background-color:cornflowerblue;
+}
+@media screen and (max-width: 625px){
+    .productForm, .productInfo {
+        display: block;
+        width: 100%;
+        margin: 5px;
+        min-width: 400px;
+    }
+}
+@media print {
+    .label {
+        background-color: white;
+        color: black;
+        border: 5px solid black;
+        bottom: 0;
+    }
+    .label .title {
+        display: none;
+    }
+}
+.tooltip:before{
+    background-color:darkviolet;
+    color: aliceblue;
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 4px;
+    transition: 1s;
+    height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+}
+.tooltip:hover:before{
+    opacity: 1;
+    height: 70px;
+    visibility: visible;
+}
+button {
+    position: relative;
+    transition: 0.5s;
+}
+.notDisplayed {
+    display: none !important; 
+}
+.disabled {
+    opacity: 0;
+}
+.stressed {
+    text-decoration: line-through;
+}
